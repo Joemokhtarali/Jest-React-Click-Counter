@@ -4,12 +4,16 @@ import './App.css';
 
 function App() {
   const [count, setcount] = useState(0)
+  const incrementCount = () => {
+    setcount(count + 1)
+  }
+  
   return (
     <div data-test="component-app">
       <h1 data-test="counter-display">The counter is currently
         <span data-test="count">{count}</span>
       </h1>
-      <button data-test="increment-button">Increment button</button>
+      <button data-test="increment-button" onClick={incrementCount } >Increment button</button>
     </div>
   );
 }
